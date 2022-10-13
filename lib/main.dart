@@ -1,8 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:waterreminder/register.dart';
 
-import 'app.dart';
 
-Future<void> main() async {
-  WidgetsFlutterBinding.ensureInitialized();
-  runApp(App());
+void main(){
+  runApp(MaterialApp(
+    debugShowCheckedModeBanner: false ,
+    initialRoute: 'register',
+    routes:{
+      'register':(context)=>Register()
+    },
+  ));
 }
