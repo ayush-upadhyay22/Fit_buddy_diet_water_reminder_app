@@ -3,6 +3,8 @@ abstract class Constant {
 
   static const methodDrinkWater = "METHOD_DRINK_WATER";
 
+  static const methodEatfood = "METHOD_EAT_FOOD";
+
   static const methodWaterSettingsChanged = "METHOD_WATER_SETTINGS_CHANGED";
 
   static const methodChangeNotificationEnabled =
@@ -14,4 +16,7 @@ abstract class Constant {
 
   static const methodSetRecommendedMilliliters =
       "METHOD_SET_RECOMMENDED_MILLILITERS";
+
+  static const methodSetRecommendedfood =
+      "METHOD_SET_RECOMMENDED_FOOD";
 }

@@ -8,7 +8,7 @@ class DietInputGroup extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     void addInput(DietInput value) {
-      context.read<DietBloc>().drinkWater(value);
+      context.read<DietBloc>().diet(value);
     }
 
     return Wrap(

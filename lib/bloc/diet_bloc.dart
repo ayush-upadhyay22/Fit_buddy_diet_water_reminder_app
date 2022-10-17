@@ -7,7 +7,7 @@ import 'package:waterreminder/domain/repository/diet_repository.dart';
 
 class DietBloc extends Cubit<DietSettings> {
   DietBloc(this._repository) : super(DietSettings.initial()) {
-    _subscription = _repository.waterSettings.listen((event) {
+    _subscription = _repository.dietSettings.listen((event) {
       emit(event);
     });
   }
@@ -15,27 +15,27 @@ class DietBloc extends Cubit<DietSettings> {
   final DietRepository _repository;
   StreamSubscription? _subscription;
 
-  int get currentWater => state.currentMilliliters;
-  int get remainigWater =>
-      state.currentMilliliters <= state.recommendedMilliliters
-          ? state.recommendedMilliliters - state.currentMilliliters
+  int get food => state.food;
+  int get remainigfood =>
+      state.food <= state.recommendedfood
+          ? state.recommendedfood - state.food
           : 0;
   double get progress =>
-      state.currentMilliliters / state.recommendedMilliliters;
+      state.food / state.recommendedfood;
 
-  Future<void> drinkWater(DietInput input) async {
-    _repository.drinkWater(input.milliliters);
+  Future<void> diet(DietInput input) async {
+    _repository.diet(input.food);
   }
 
   void changeAlarmEnabled(bool enabled) {
     _repository.changeAlarmEnabled(enabled);
   }
 
-  void setRecommendedMilliliters(int milliliters) {
-    _repository.setRecommendedMilliliters(milliliters);
+  void setRecommendedfood(int milliliters) {
+    _repository.setRecommendedfood(milliliters);
   }
 
-  void clearDataStore() {
+  void clearDataStore()  {
     _repository.clearDataStore();
   }
 

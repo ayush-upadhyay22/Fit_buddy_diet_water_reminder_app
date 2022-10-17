@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:waterreminder/bloc/diet_bloc.dart';
 import 'package:waterreminder/ui/hydration_progress/diet_progress_painter.dart';
-import 'package:waterreminder/util/num_extension.dart';
+import 'package:waterreminder/util/diet_num_extension.dart';
 
 class DietProgressView extends StatelessWidget {
   @override
@@ -61,12 +61,12 @@ class _DataColumn extends StatelessWidget {
         ),
         SizedBox(height: 4),
         Text(
-          bloc.state.currentMilliliters.asMilliliters(),
+          bloc.state.food.asMilliliters(),
           style: theme.textTheme.bodyText1,
         ),
         SizedBox(height: 8),
         Text(
-          bloc.remainigWater.asMilliliters(),
+          bloc.remainigfood.asMilliliters(),
           style: theme.textTheme.caption,
         ),
       ],

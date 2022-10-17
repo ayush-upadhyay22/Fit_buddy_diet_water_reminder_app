@@ -56,9 +56,9 @@ class _DietPoolPageState extends State<DietPoolPage>
             mainAxisSize: MainAxisSize.min,
             children: [
 
-              DietQuantityText(bloc.currentWater),
+              DietQuantityText(bloc.food),
               SizedBox(height: 8),
-              RemainingDietText(bloc.remainigWater),
+              RemainingDietText(bloc.remainigfood),
             ],
           ),
         ),

@@ -1,26 +1,26 @@
 class DietSettings {
-  final int currentMilliliters;
-  final int recommendedMilliliters;
+  final int food;
+  final int recommendedfood;
   final bool alarmEnabled;
 
   DietSettings({
-    required this.currentMilliliters,
-    required this.recommendedMilliliters,
+    required this.food,
+    required this.recommendedfood,
     required this.alarmEnabled,
   });
 
   factory DietSettings.initial() {
     return DietSettings(
-      currentMilliliters: 0,
-      recommendedMilliliters: 2000,
+      food: 0,
+      recommendedfood: 100,
       alarmEnabled: true,
     );
   }
 
   factory DietSettings.fromMap(Map map) {
     return DietSettings(
-      currentMilliliters: map["currentMilliliters"],
-      recommendedMilliliters: map["recommendedMilliliters"],
+      food: map["food"],
+      recommendedfood: map["recommendedfood"],
       alarmEnabled: map["alarmEnabled"],
     );
   }
@@ -30,14 +30,14 @@ class DietSettings {
     if (identical(this, other)) return true;
 
     return other is DietSettings &&
-        other.currentMilliliters == currentMilliliters &&
-        other.recommendedMilliliters == recommendedMilliliters &&
+        other.food == food &&
+        other.recommendedfood == recommendedfood &&
         other.alarmEnabled == alarmEnabled;
   }
 
   @override
   int get hashCode =>
-      currentMilliliters.hashCode ^
-      recommendedMilliliters.hashCode ^
+      food.hashCode ^
+      recommendedfood.hashCode ^
       alarmEnabled.hashCode;
 }

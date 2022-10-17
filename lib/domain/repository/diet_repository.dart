@@ -10,7 +10,7 @@ class DietRepository {
     PlatformMessenger.setMethodCallHandler((call) {
       switch (call.method) {
         case Constant.methodWaterSettingsChanged:
-          _waterSettings.add(DietSettings.fromMap(call.arguments));
+          _dietSettings.add(DietSettings.fromMap(call.arguments));
           break;
         default:
           break;
@@ -19,12 +19,12 @@ class DietRepository {
     });
   }
 
-  final _waterSettings = BehaviorSubject<DietSettings>();
+  final _dietSettings = BehaviorSubject<DietSettings>();
 
-  Stream<DietSettings> get waterSettings => _waterSettings.stream;
+  Stream<DietSettings> get dietSettings => _dietSettings.stream;
 
-  void drinkWater(int milliliters) {
-    PlatformMessenger.invokeMethod(Constant.methodDrinkWater, milliliters);
+  void diet(int milliliters) {
+    PlatformMessenger.invokeMethod(Constant.methodEatfood, milliliters);
   }
 
   void changeAlarmEnabled(bool enabled) {
@@ -36,9 +36,9 @@ class DietRepository {
     PlatformMessenger.invokeMethod(Constant.methodSubscribeToDataStore);
   }
 
-  void setRecommendedMilliliters(int milliliters) {
+  void setRecommendedfood(int food) {
     PlatformMessenger.invokeMethod(
-        Constant.methodSetRecommendedMilliliters, milliliters);
+        Constant.methodSetRecommendedfood, food);
   }
 
   void clearDataStore() {
@@ -46,6 +46,6 @@ class DietRepository {
   }
 
   void close() {
-    _waterSettings.close();
+    _dietSettings.close();
   }
 }

@@ -2,12 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:waterreminder/resources/app_symbols.dart';
 
 class DietInput {
-  final int milliliters;
+  final int food;
   final IconData icon;
   final Color backgroundColor;
 
   DietInput({
-    required this.milliliters,
+    required this.food,
     required this.icon,
     required this.backgroundColor,
   });
@@ -21,8 +21,8 @@ class DietInput {
 class _Small extends DietInput {
   _Small()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.coffee_cup,
+          food: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFF1EEFF),
         );
 }
@@ -30,8 +30,8 @@ class _Small extends DietInput {
 class _Regular extends DietInput {
   _Regular()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.water_glass,
+          food: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFF8F8F6),
         );
 }
@@ -39,8 +39,8 @@ class _Regular extends DietInput {
 class _Medium extends DietInput {
   _Medium()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.water,
+          food: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFFFFAEC),
         );
 }
@@ -48,8 +48,8 @@ class _Medium extends DietInput {
 class _Large extends DietInput {
   _Large()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.jug,
+          food: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFFBE9E3),
         );
 }

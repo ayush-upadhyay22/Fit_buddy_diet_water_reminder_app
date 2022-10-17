@@ -22,7 +22,7 @@ class DietButton extends StatelessWidget {
         child: TextButton.icon(
           onPressed: () => onPressed(input),
           icon: Icon(input.icon),
-          label: Text("${input.milliliters} ml"),
+          label: Text("${input.food} %"),
           style: ButtonStyle(
             backgroundColor: MaterialStateProperty.all(input.backgroundColor),
             foregroundColor: MaterialStateProperty.all(Colors.black),

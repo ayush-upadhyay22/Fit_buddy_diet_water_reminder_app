@@ -26,4 +26,6 @@ class AppSymbols {
   static const IconData water_drop = IconData(0xe802, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData water = IconData(0xe803, fontFamily: _kFontFam, fontPackage: _kFontPkg);
   static const IconData water_glass = IconData(0xe804, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData restaurant = IconData(0xe25a, fontFamily: 'MaterialIcons');
+
 }
