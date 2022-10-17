@@ -3,7 +3,6 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static ThemeData light = ThemeData(
     primaryColor: Color(0xFF382469),
-    accentColor: Color(0xFF8762FF),
     indicatorColor: Color(0xFF382469),
     scaffoldBackgroundColor: Colors.white,
     backgroundColor: Colors.white,
@@ -44,6 +43,6 @@ class AppTheme {
       cursorColor: Color(0xFF382469),
       selectionHandleColor: Color(0xFF382469),
       selectionColor: Color(0x1F382469),
-    ),
+    ), colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Color(0xFF8762FF)),
   );
 }

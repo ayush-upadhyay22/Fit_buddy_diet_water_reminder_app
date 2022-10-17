@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:waterreminder/bloc/water_bloc.dart';
+import 'package:waterreminder/bloc/diet_bloc.dart';
 import 'package:waterreminder/ui/settings/rolling_switch_button.dart';
 import 'package:waterreminder/util/dialog.dart';
 import 'package:waterreminder/util/num_extension.dart';
 
-class SettingsPage extends StatelessWidget {
+class DietSettingsPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final bloc = context.watch<WaterBloc>();
+    final bloc = context.watch<DietBloc>();
     final theme = Theme.of(context);
     return SafeArea(
       child: Padding(
@@ -39,7 +39,6 @@ class SettingsPage extends StatelessWidget {
                   ],
                 ),
               ),
-              // SizedBox(height: 32),
               // TextButton(
               //   onPressed: () => showConsumptionDialog(context),
               //   style: ButtonStyle(
@@ -103,7 +102,7 @@ class SettingsPage extends StatelessWidget {
           "You are about to reset all the application data. This action cannot be undone.",
     );
     if (confirmed) {
-      context.read<WaterBloc>().clearDataStore();
+      context.read<DietBloc>().clearDataStore();
     }
   }
 }

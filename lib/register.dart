@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:waterreminder/app.dart';
+import 'package:waterreminder/ui/diet_app.dart';
 
 class Register extends StatefulWidget {
   const Register({Key? key}) : super(key: key);
@@ -45,7 +46,9 @@ class _RegisterState extends State<Register> {
                     padding: EdgeInsets.symmetric(horizontal: 40, vertical: 8),
                     shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(15))
                     ),
-                  onPressed: (){},
+                  onPressed: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (context) => DietApp()));
+                  },
                   child: Text("Diet Reminder",style: TextStyle(
                     color: Colors.black,
                     fontSize: 20),
