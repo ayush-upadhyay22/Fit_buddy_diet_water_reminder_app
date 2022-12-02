@@ -58,7 +58,6 @@ class _DietPoolPageState extends State<DietPoolPage>
 
               DietQuantityText(bloc.currentWater),
               SizedBox(height: 8),
-              RemainingDietText(bloc.remainigWater),
             ],
           ),
         ),

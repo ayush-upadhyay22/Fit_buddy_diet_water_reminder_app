@@ -56,19 +56,11 @@ class _DataColumn extends StatelessWidget {
       children: [
         SizedBox(width: double.infinity),
         Text(
-          "${(progress * 100).toInt()} %",
+          "${(progress *100).toInt()} %",
           style: theme.textTheme.headline1,
         ),
         SizedBox(height: 4),
-        Text(
-          bloc.state.currentMilliliters.asMilliliters(),
-          style: theme.textTheme.bodyText1,
-        ),
-        SizedBox(height: 8),
-        Text(
-          bloc.remainigWater.asMilliliters(),
-          style: theme.textTheme.caption,
-        ),
+        
       ],
     );
   }

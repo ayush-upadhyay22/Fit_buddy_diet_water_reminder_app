@@ -21,7 +21,7 @@ class DietBloc extends Cubit<DietSettings> {
           ? state.recommendedMilliliters - state.currentMilliliters
           : 0;
   double get progress =>
-      state.currentMilliliters / state.recommendedMilliliters;
+      ((state.currentMilliliters / state.recommendedMilliliters)*20);
 
   Future<void> drinkWater(DietInput input) async {
     _repository.drinkWater(input.milliliters);

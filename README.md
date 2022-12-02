@@ -1,5 +1,6 @@
 # Water Reminder App
 
+
 Android water reminder App made with Flutter using Android APIs such as DataStore and AlarmManager.
 
 Uses a native activity which is displayed when an alarm notification is triggered and the device is locked.

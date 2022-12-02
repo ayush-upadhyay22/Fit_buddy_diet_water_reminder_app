@@ -12,7 +12,7 @@ class DietSettings {
   factory DietSettings.initial() {
     return DietSettings(
       currentMilliliters: 0,
-      recommendedMilliliters: 2000,
+      recommendedMilliliters: 100,
       alarmEnabled: true,
     );
   }

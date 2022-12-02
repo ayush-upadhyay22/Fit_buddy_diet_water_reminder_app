@@ -21,8 +21,8 @@ class DietInput {
 class _Small extends DietInput {
   _Small()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.coffee_cup,
+          milliliters: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFF1EEFF),
         );
 }
@@ -30,8 +30,8 @@ class _Small extends DietInput {
 class _Regular extends DietInput {
   _Regular()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.water_glass,
+          milliliters: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFF8F8F6),
         );
 }
@@ -39,8 +39,8 @@ class _Regular extends DietInput {
 class _Medium extends DietInput {
   _Medium()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.water,
+          milliliters: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFFFFAEC),
         );
 }
@@ -48,8 +48,8 @@ class _Medium extends DietInput {
 class _Large extends DietInput {
   _Large()
       : super(
-          milliliters: 500,
-          icon: AppSymbols.jug,
+          milliliters: 25,
+          icon: AppSymbols.restaurant,
           backgroundColor: Color(0xFFFBE9E3),
         );
 }
